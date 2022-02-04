@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import BlogContext from "../context/BlogContext";
 
 const IndexScreen = () => {
+  const value = useContext(BlogContext);
+  console.log(value);
   return (
     <View>
       <Text>hi</Text>
+      <Text>{value}</Text>
     </View>
   );
 };
